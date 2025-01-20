@@ -14,18 +14,10 @@ namespace Assignment03
         public SecurityLevel SecurityLevel { get; set; }
         public decimal Salary { get; set; }
         public HireDate HireDate { get; set; }
-        char gender;
-        public char Gender
-        {
-            get { return gender; }
-             set
-            {
-                if (value != 'M' && value != 'F')Console.WriteLine("Gender must be 'M' or 'F'.");
-                gender = value;
-            }
-        }
+        public char Gender { get; set; }
         public Employee(int id, string name, SecurityLevel securityLevel, decimal salary, HireDate hireDate, char gender)
         {
+            if (gender != 'M' && gender != 'F') Console.WriteLine("Gender must be 'M' or 'F'.");
             ID = id;
             Name = name;
             SecurityLevel = securityLevel;
@@ -35,7 +27,7 @@ namespace Assignment03
         }
         public override string ToString()
         {
-            return $"ID: {ID}, Name: {Name}, Security Level: {SecurityLevel}, Salary: {Salary.ToString("C", CultureInfo.CurrentCulture)}, Hire Date: {HireDate}, Gender: {Gender}";
+            return $"ID: {ID}, Name: {Name}, Security Level: {SecurityLevel}, Salary: {Salary:c}, Hire Date: {HireDate}, Gender: {Gender}";
         }
     }
 

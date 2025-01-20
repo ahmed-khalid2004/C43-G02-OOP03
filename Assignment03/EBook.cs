@@ -8,7 +8,7 @@ namespace Assignment03
 {
     public class EBook : Book
     {
-        public double FileSize { get; private set; } 
+        public double FileSize { get; set; } 
         public EBook(string title, string author, string isbn, double fileSize):base(title, author, isbn)
         {
             FileSize = fileSize;

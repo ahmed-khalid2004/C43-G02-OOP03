@@ -13,7 +13,7 @@ namespace Assignment03
         public int Year { get; set; }
         public HireDate(int day, int month, int year)
         {
-            if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > DateTime.Now.Year)Console.WriteLine("Invalid date.");
+            if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1950 || year > DateTime.Now.Year)Console.WriteLine("Invalid date.");
             Day = day;
             Month = month;
             Year = year;
